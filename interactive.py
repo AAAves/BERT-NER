@@ -63,7 +63,7 @@ def bert_ner_init():
     if args.dataset in ["conll"]:
         bert_class = 'bert-base-cased'
     elif args.dataset in ["msra"]:
-        bert_class = 'bert-base-chinese'
+        bert_class = './pretrained_bert_models/bert-base-cased'
 
     data_loader = DataLoader(data_dir, bert_class, params, token_pad_idx=0, tag_pad_idx=-1)
 
